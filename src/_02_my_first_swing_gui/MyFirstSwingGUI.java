@@ -4,6 +4,7 @@ package _02_my_first_swing_gui;
  *    Level 1
  */
 
+import java.awt.Frame;
 import java.awt.Robot;
 import java.io.IOException;
 
@@ -24,25 +25,26 @@ frame.setVisible(true);
 		// small.
 
 		// 4. Set the default close operation to JFrame.EXIT_ON_CLOSE
-
-		// 5. Create and initialize an object of the JPanel class
+frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+// 5. Create and initialize an object of the JPanel class
+JPanel object = new JPanel();
 
 		// 6. Create and initialize an object of the JLabel class
-
+JLabel greeting = new JLabel();
 		// 7. Set the text of the JLabel to a lovely greeting.
-
+greeting.setText("Hello! How are you? Welecome!");
 		// 8. Add the JPanel object to the JFrame
-
+frame.add(object);
 		// 9. Add the JLabel object to the JPanel
-
+object.add(greeting);
 		// 10. Pack your JFrame.
-
+frame.pack();
 		// 11. Run your program again. Do you see your message.
-
+//YES
 		// 12. Use the loadImage method to set the icon of the JLabel object.
-
+greeting.setIcon(loadImage() );
 		// 13. Re-pack the JFrame object.
-
+frame.pack();
 		// 14. Run the program one more time. Do you see the image?
 
 	}
